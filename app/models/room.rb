@@ -1,9 +1,7 @@
 class Room < ApplicationRecord
   has_many :room_users
   has_many :users, through: :room_users
-  belongs_to :room
-  belongs_to :user
+  has_many :messages
 
   validates :name, presence: true
-
 end
